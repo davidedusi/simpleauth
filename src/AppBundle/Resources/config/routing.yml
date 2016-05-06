@@ -8,3 +8,9 @@ app_admin:
     defaults:
         _controller: FrameworkBundle:Template:template
         template:    @AppBundle/static/admin.html.twig
+
+app_user:
+    path: /user/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    @AppBundle/static/user.html.twig
