@@ -1,0 +1,10 @@
+app_root:
+    path: /
+    defaults:
+        _controller: AppBundle:Default:index
+
+app_admin:
+    path: /admin/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    @AppBundle/static/admin.html.twig
