@@ -1,0 +1,15 @@
+parameters:
+    loginauth.component.authentication.handler.login_success_handler.class: AppBundle\Component\Authentication\Handler\LoginSuccessHandler
+    loginauth.component.authentication.handler.logout_success_handler.class: AppBundle\Component\Authentication\Handler\LogoutSuccessHandler
+
+services:
+    loginauth.component.authentication.handler.login_success_handler:
+        class:  %loginauth.component.authentication.handler.login_success_handler.class%
+        arguments:  [@router, @security.context]
+        tags:
+            - { name: 'monolog.logger', channel: 'security' } 
+    loginauth.component.authentication.handler.logout_success_handler:
+        class:  %loginauth.component.authentication.handler.logout_success_handler.class%
+        arguments:  [@router]
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }

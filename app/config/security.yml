@@ -14,9 +14,17 @@ security:
         main:
             pattern: ^/
             form_login:
-                provider: fos_userbundle
+                provider:       fos_userbundle
                 csrf_provider: security.csrf.token_manager # Use form.csrf_provider instead for Symfony <2.4
-            logout:       true
+                login_path:     /login
+                use_forward:    false
+                check_path:     /login_check
+                success_handler: loginauth.component.authentication.handler.login_success_handler
+                failure_path:   null
+            logout:
+                path:   /logout
+                target: /login
+                success_handler: loginauth.component.authentication.handler.logout_success_handler
             anonymous:    true
 
     access_control:
