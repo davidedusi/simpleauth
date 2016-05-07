@@ -2,7 +2,7 @@
 namespace AppBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
-use AppBundle\Entity\Api;
+use AppBundle\Helper\Api;
 use Symfony\Component\HttpFoundation\Response;
 
 class ApiController extends FOSRestController
