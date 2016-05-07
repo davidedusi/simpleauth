@@ -77,3 +77,14 @@ fos_user:
 fos_rest:
     view:
         view_response_listener: force
+
+fos_oauth_server:
+    db_driver: orm
+    client_class:        AppBundle\Entity\Client
+    access_token_class:  AppBundle\Entity\AccessToken
+    refresh_token_class: AppBundle\Entity\RefreshToken
+    auth_code_class:     AppBundle\Entity\AuthCode
+
+fos_oauth_server:
+    service:
+        user_provider: fos_user.user_provider.username
