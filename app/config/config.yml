@@ -18,7 +18,7 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
-    #serializer:      { enable_annotations: true }
+    serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
     default_locale:  "%locale%"
@@ -73,3 +73,7 @@ fos_user:
     from_email:
             address:        noreply@davidedusi.com
             sender_name:    SimpleAuth App
+
+fos_rest:
+    view:
+        view_response_listener: force
