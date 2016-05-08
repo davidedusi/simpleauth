@@ -1,0 +1,24 @@
+{% extends "AppBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+    <div class="container">
+        <div class="col-lg-12">
+            <h1>Simple Auth Project</h1>
+            <p>
+                You can <a title="Sign up" href="{{ path('fos_user_registration_register') }}">Sign up</a> or <a title="Sign in" href="{{ path('fos_user_security_login') }}">Sign in</a> by clicking the button below.
+            </p>
+            <a href="{{ path('fos_user_registration_register') }}" class="btn btn-primary btn-login col-lg-5" id="sign_in" name="sign_in">
+                Sign up
+            </a>
+            <a href="{{ path('fos_user_security_login') }}" class="btn btn-primary btn-login col-lg-offset-2 col-lg-5" id="sign_up" name="sign_up">
+                Sign in
+            </a>
+            <p>
+                If you don't remember your password you can reset it.
+            </p>
+            <a href="{{ path('fos_user_resetting_request') }}" class="btn btn-primary btn-login col-lg-5" id="reset_password" name="reset_password">
+                Reset Password
+            </a>
+        </div>
+    </div><!-- /.container -->
+{% endblock %}

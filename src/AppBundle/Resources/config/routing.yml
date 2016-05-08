@@ -1,7 +1,8 @@
 app_root:
     path: /
     defaults:
-        _controller: AppBundle:Default:index
+        _controller: FrameworkBundle:Template:template
+        template:    @AppBundle/static/index.html.twig
 
 app_admin:
     path: /admin/
