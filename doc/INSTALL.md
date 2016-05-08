@@ -80,7 +80,7 @@ php app/console app:oauth-server:client:create --redirect-uri=http://simpeauth/l
 
 #### CREARE AUTH TOKEN
 
-Generare un token di autenticazione utilizzato il <public_id> e il <secret> del client
+Generare un token di autenticazione utilizzato il *public_id* e il *secret* del client
 
 ```
 
@@ -90,7 +90,7 @@ curl -u <public_id>:<secret>  http://simpleauth.local/oauth/v2/token -d 'grant_t
 
 #### ACCESSO ALLE API CON TOKEN DI AUTENTICAZIONE
 
-Utilizzare l'<auth_token> per accedere alle api protette
+Utilizzare l'*auth_token* per accedere alle api protette
 
 ```
 
