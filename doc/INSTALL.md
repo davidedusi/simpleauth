@@ -70,17 +70,17 @@ php app/console doctrine:schema:update --force
 
 #### CREARE CLIENT 
 
-Creare client di autenticazione con accesso client_credentials, con il comando shell personalizzato
+Creare client di autenticazione con accesso client_credentials, con il comando shell personalizzato, sostituendo il dominio corretto
 
 ```
 
-php app/console app:oauth-server:client:create --redirect-uri=http://simpeauth/login --grant-type=token --grant-type=authorization_code --grant-type=password --grant-type=client_credentials
+php app/console app:oauth-server:client:create --redirect-uri=http://simpeauth.local/login --grant-type=token --grant-type=authorization_code --grant-type=password --grant-type=client_credentials
 
 ```
 
 #### CREARE AUTH TOKEN
 
-Generare un token di autenticazione utilizzato il *public_id* e il *secret* del client
+Generare un token di autenticazione utilizzato il *public_id* e il *secret* del client e sostituendo il dominio corretto
 
 ```
 
@@ -90,7 +90,7 @@ curl -u <public_id>:<secret>  http://simpleauth.local/oauth/v2/token -d 'grant_t
 
 #### ACCESSO ALLE API CON TOKEN DI AUTENTICAZIONE
 
-Utilizzare l'*auth_token* per accedere alle api protette
+Utilizzare l'*auth_token* per accedere alle api protette nel dominio
 
 ```
 
